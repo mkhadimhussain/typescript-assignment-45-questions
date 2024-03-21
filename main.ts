@@ -1,9 +1,3 @@
-////////////////////////////////////////////
-/////////100 Days of Code Challenge/////////
-////////////////////////////////////////////
-/*
-/////////////////DAY 1 CHALLENGE//////////////////////
-
 //QUESTION 1: install Node.js, Tyoescript and VS Code on your Computer/Laptop.
 //ANSWER 1: DONE
 
@@ -15,10 +9,10 @@ const perName : string = "Atif"
 console.log(`Hello ${perName}, would you like to learn some TypeScript today?`)
 
 //another way
-//console.log("Hello" + " " + perName + ", " + "would you like to learn some TypeScript today?")
+console.log("Hello" + " " + perName + ", " + "would you like to learn some TypeScript today?")
 
 //another way
-//console.log('Hello' ,perName, ', would you like to learn some TypeScript today?')
+console.log('Hello' ,perName, ', would you like to learn some TypeScript today?')
 
 //QUESTION 3: Name Cases: Store a person’s name in a variable, and then print that person’s name 
 //            in lowercase, uppercase, and titlecase.
@@ -29,8 +23,6 @@ console.log(name1.toLowerCase())          //for small letters
 console.log(name1.toUpperCase())          //for big/capital letters
 console.log(name1.charAt(0).toUpperCase() + name1.slice(1).toLowerCase())   //for 1st char big other small
 
-/////////////////DAY 2 CHALLENGE//////////////////////
-
 //QUESTION 4: Famous Quote: Find a quote from a famous person you admire. Print the quote and the 
 //name of its author. Your output should look something like the following, including the quotation 
 //marks:"Albert Einstein once said, “A person who never made a mistake never tried anything new.”"
@@ -40,10 +32,10 @@ const author : string = "Albert Einstein"
 console.log(author, 'once said, "A person who never made a mistake never tried anything new."')
 
 //another way
-//console.log(`${author} once said, "A person who never made a mistake never tried anything new."`)
+console.log(`${author} once said, "A person who never made a mistake never tried anything new."`)
 
 //another way
-//console.log('Albert Einstein once said, "A person who never made a mistake never tried anything new."')
+console.log('Albert Einstein once said, "A person who never made a mistake never tried anything new."')
 
 //QUESTION 5: Famous Quote 2: Repeat Exercise 1, but this time store the famous person’s name in a 
 //variable called famous_person. Then compose your message and store it in a new variable called 
@@ -56,8 +48,8 @@ let message : string = `${famous_person} once said, "A person who never made a m
 console.log(message)
 
 //another way
-//const quote : string = '"A person who never made a mistake never tried anything new."'
-//console.log(famous_person, "once said,", quote) 
+const quote : string = '"A person who never made a mistake never tried anything new."';
+console.log(famous_person, "once said,", quote); 
 
 //QUESTION 6: Stripping Names: Store a person’s name, and include some whitespace characters at the 
 //beginning and end of the name. Use "\t" (tab) and "\n" (new line) at least once. Print the name once,
@@ -65,11 +57,9 @@ console.log(message)
 
 //ANSWER 6:
 let namee : string = "\t\n Khadim \t\n"
-//console.log(namee)            //name with tab and newline spaces
 
+console.log(namee)            //name with tab and newline spaces
 console.log(namee.trim())       //name without spaces
-
-/////////////////DAY 3 CHALLENGE//////////////////////
 
 //QUESTION 7: Number Eight: Write addition, subtraction, multiplication, and division operations that 
 //each result in the number 8. Enclose your operations in print statements.
@@ -95,8 +85,6 @@ console.log(32 / 4)        //Division
 //ANSWER 9:
 const fav_number : number = 24
 console.log("My Favorite Number is : ", fav_number) 
-
-/////////////////DAY 4 CHALLENGE//////////////////////
 
 //QUESTION 10: Adding Comments: Choose two of the programs you’ve written, and add at least one 
 //comment to each. If the programs are straightforward at this point, just add your name and the 
@@ -132,8 +120,6 @@ for (let i = 0; i < names.length; i++) {
     console.log(`What are you doing ${names[i]} lets learn TypeScript.`)
 } 
 
-/////////////////DAY 5 CHALLENGE//////////////////////
-
 //QUESTION 13: Your Own Array: Think of your favorite mode of transportation, such as a motorcycle or a 
 //car, and make a list that stores several examples. Use your list to print a series of statements about 
 //these items, such as “I would like to own a Honda motorcycle.”
@@ -145,9 +131,9 @@ for (let i=0; i < fav_transport.length; i++) {
 }
 
 //another way
-// fav_transport.forEach(fav_transport => {
-//     console.log(`I would like to own a ${fav_transport}`)
-// })                      
+fav_transport.forEach(fav_transport => {
+    console.log(`I would like to own a ${fav_transport}`)
+})                      
 
 //QUESTION 14: Guest List: If you could invite anyone, living or deceased, to dinner, who would you 
 //invite? Make a list that includes at least three people you’d like to invite to dinner. Then use your 
@@ -173,8 +159,6 @@ guest[guest.indexOf(unable)] = newguest
 guest.forEach(guest => {
     console.log(`Hello ${guest}, i would like to invite you in my Dinner Party.`)
 })        
-
-/////////////////DAY 6 CHALLENGE//////////////////////
 
 //QUESTION 16: More Guests: You've found a bigger dinner table, so there's room for more guests.
 
@@ -255,8 +239,6 @@ console.log(`I want to visit ${alphabeticalOrder}`)
 let reverseAlphabetical = [...places].sort().reverse()
 console.log(`I want to see ${reverseAlphabetical}`)         
 
-/////////////////DAY 7 CHALLENGE//////////////////////
-
 //QUESTION 19: Dinner Guests: Use one of your programs from Exercises 14 through 18 to print a message 
 //             indicating the number of people you are inviting to dinner.
 
@@ -295,8 +277,6 @@ let myself : {namee : string; city : string; age : number} =
     age : 23
 }
 console.log(`My name is ${myself.namee}, i am from ${myself.city} and i am ${myself.age} years ago.`)
-
-/////////////////DAY 8 CHALLENGE//////////////////////
 
 //QUESTION 22: Intentional Error: Try to produce an array index error in one of your programs. Correct
 //              the error before finishing.
@@ -374,8 +354,6 @@ console.log("Total Fruits:",fruitss);
 console.log("Is 'Orange' in fruitss?");
 console.log(fruitss.indexOf("Orange") !== -1);     //false
 
-/////////////////DAY 9 CHALLENGE//////////////////////
-
 //QUESTION 25: Alien Colors #1: Imagine an alien was just shot down in a game. Assign 'green', 'yellow', 
 //             or 'red' to a variable called alien_color.
 
@@ -444,8 +422,6 @@ else if (alien_color3 == "red") {
 else {
     console.log("you win 10 points")
 }
-
-/////////////////DAY 10 CHALLENGE//////////////////////
 
 //QUESTION 28: Stages of Life: Determine a person’s life stage with an if-else chain.
 
@@ -527,8 +503,6 @@ userNamess.forEach(userNamess => {
     }
 })
 
-/////////////////DAY 11 CHALLENGE//////////////////////
-
 //QUESTION 31: No Users: Ensure your user list isn’t empty.
 
 //ANSWER 31:
@@ -584,8 +558,6 @@ numberss.forEach(numberss => {
     console.log(`${numberss}${suffix}`);
 });
 
-/////////////////DAY 12 CHALLENGE//////////////////////
-
 //QUESTION 34: Pizzas: Share your favorite pizzas and express your love for them.
 
 //ANSWER 34:
@@ -623,10 +595,6 @@ function bag(color : String, size : string, message : string) {
     console.log(`your ${size} bag with ${color} color and "${message}" printed on it, is ready.`);
 }
 bag("Black", "Large", "Code is life");
-
-
-
-/////////////////DAY 13 CHALLENGE//////////////////////
 
 //QUESTION 37: Large Shirts: Default values in make_shirt().
 
@@ -682,11 +650,7 @@ console.log(city_country1("Istanbul", "Turkey"));
 console.log(city_country1("Mumbai", "India"));
 console.log(city_country1("Paris", "France"));
 
-
-
-/////////////////DAY 14 CHALLENGE//////////////////////
-*/
-//QUESTION 40: 
+//QUESTION 40: Album: Create objects for music albums.
 
 //ANSWER 40:
 function music_album(artist : string, title : string, track : number) {
@@ -700,7 +664,7 @@ console.log(music_album("Artist 1", "The 1st Album", 5));
 console.log(music_album("Artist 2", "The 2nd Album", 6));
 console.log(music_album("Artist 3", "The 3rd Album", 7));
 
-//QUESTION 41: 
+//QUESTION 41: Magicians: Display magician names from an array.
 
 //ANSWER 41:
 let magicians : string[] = ["Taimor", "Mohsin", "Zahid"];
@@ -712,7 +676,7 @@ function show_magicians(magicians : string[]) {
 }
 show_magicians(magicians);
 
-//QUESTION 42: 
+//QUESTION 42: Great Magicians: Add "the Great" to magician names.
 
 //ANSWER 42:
 //using the answer 41 magicians array
@@ -733,10 +697,8 @@ function great_magi(magicians : string[]) {
 great_magi(magicians); //modifies the original array
 show_magicians(magicians);
 
-
-/////////////////DAY 15 CHALLENGE//////////////////////
-
-//QUESTION 43: 
+//QUESTION 43: Unchanged Magicians: Preserve the original magician names while creating a new "great" 
+//              list.
 
 //ANSWER 43:
 console.log("\n q43");
@@ -744,8 +706,8 @@ let magicians1 : string[] = ["Taimor", "Mohsin", "Zahid"];
 
 function theGreat(magicians1 : string[]) {
     let great_magicians1: string[] = [];
-    magicians1.forEach(magicians1 => {
-        great_magicians1.push(`${magicians1}, the great`);
+    magicians1.forEach(element => {
+        great_magicians1.push(`${element}, the great`);
     });
     return great_magicians1
 }
@@ -755,64 +717,23 @@ show_magicians(magicians); //shows original names
 console.log("Great Magicians:");
 show_magicians(great_magicians1); //shows modified names
 
-//QUESTION 44: 
+//QUESTION 44: Sandwiches: Summarize sandwich orders with varying ingredients.
 
 //ANSWER 44:
-// function m
+function make_sandwich(...items : string[]) {
+    console.log(`Making a sandwich with: ${items.join(',')}.`);
+}
+make_sandwich("ham", "cheese");
+make_sandwich("turkey", "lettuce", "tomato");
+make_sandwich("avocado", "sprouts", "mustard", "mayo");
 
-
-
-
-
-
-
-//QUESTION 45: 
+//QUESTION 45: Cars: Create detailed car objects with flexible properties
 
 //ANSWER 45:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function make_car(manufacturer : string, model : string, ...options : [string, any][]): object {
+    let car = {manufacturer, model};
+    options.forEach(([key, value]) => car[key] = value);
+    return car;
+}
+console.log(make_car("Toyota", "Corolla", ["Color", "red"], ["year", 2020]));
+console.log(make_car("Ford","Fiesta", ["Color", "Blue"], ["sunroof", true]));

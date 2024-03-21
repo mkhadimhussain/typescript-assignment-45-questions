@@ -623,73 +623,67 @@ function bag(color : String, size : string, message : string) {
     console.log(`your ${size} bag with ${color} color and "${message}" printed on it, is ready.`);
 }
 bag("Black", "Large", "Code is life");
-
-
-
+*/
 /////////////////DAY 13 CHALLENGE//////////////////////
-
 //QUESTION 37: Large Shirts: Default values in make_shirt().
-
 //ANSWER 37:
-function make_shirt(size : string = "Large", message : string = "I love TypeScript") {
-    console.log(`Making a ${size} t-shirt with the message "${message}" printed on it.`);
+function make_shirt(size, message) {
+    if (size === void 0) { size = "Large"; }
+    if (message === void 0) { message = "I love TypeScript"; }
+    console.log("Making a ".concat(size, " t-shirt with the message \"").concat(message, "\" printed on it."));
 }
-make_shirt();          //Default Large and message
-make_shirt("medium")   //Medium size and default message
-make_shirt("Small", "I Love coding")  //small size,  custom message
-
+make_shirt(); //Default Large and message
+make_shirt("medium"); //Medium size and default message
+make_shirt("Small", "I Love coding"); //small size,  custom message
 //Another Example
 console.log("\n Another Example");
-function bag1(color : string = "Blue", size : string = "Large", msg : string = "My New Bag") {
-    console.log(`your ${size} bag with ${color} color and "${msg}" printed on it, is ready.`);
+function bag1(color, size, msg) {
+    if (color === void 0) { color = "Blue"; }
+    if (size === void 0) { size = "Large"; }
+    if (msg === void 0) { msg = "My New Bag"; }
+    console.log("your ".concat(size, " bag with ").concat(color, " color and \"").concat(msg, "\" printed on it, is ready."));
 }
-bag1();             //Default color, size and msg
-bag1("Black");      //color = Black, default size and msg
-bag1("White", "Medium");  //color = White, size = medium and default msg
-bag1("Green", "small", "My green bag");  //custom color, size and msg
-
+bag1(); //Default color, size and msg
+bag1("Black"); //color = Black, default size and msg
+bag1("White", "Medium"); //color = White, size = medium and default msg
+bag1("Green", "small", "My green bag"); //custom color, size and msg 
 //QUESTION 38: Cities: Describing cities with a function.
-
 //ANSWER 38:
-function describeCities(city : string, country : string) {
-    console.log(`${city} is in ${country}.`);
+function describeCities(city, country) {
+    console.log("".concat(city, " is in ").concat(country, "."));
 }
 //describeCities("Karachi")    t give error bcz we have another argument "Country" which is not provided.
 describeCities("Karachi", "Pakistan");
-describeCities("Lahore","Pakistan");
+describeCities("Lahore", "Pakistan");
 describeCities("Istanbul", "Turkey");
 describeCities("Ankara", "Turkey");
 describeCities("Mumbai", "India");
-console.log("\n")
-
+console.log("\n");
 //QUESTION 39: City Names: Formatting city-country pairs.
-
 //ANSWER 39:
-function city_country(city : string, country : string) {
-    console.log(`${city}, ${country}`);
+function city_country(city, country) {
+    console.log("".concat(city, ", ").concat(country));
 }
 city_country("Karachi", "Pakistan");
 city_country("Lahore", "Pakistan");
 city_country("Jeddah", "Saudi Arabia");
-
 //Another way
-console.log("\n Another Way")
-function city_country1(city : string, country : string) : string {
-    return `${city}, ${country}`;
+console.log("\n Another Way");
+function city_country1(city, country) {
+    return "".concat(city, ", ").concat(country);
 }
 console.log(city_country1("Karachi", "Pakistan"));
 console.log(city_country1("Istanbul", "Turkey"));
 console.log(city_country1("Mumbai", "India"));
 console.log(city_country1("Paris", "France"));
-
-
-
+/*
 /////////////////DAY 14 CHALLENGE//////////////////////
-*/
-//QUESTION 40: 
+
+//QUESTION 40: Album: Create objects for music albums.
+
 //ANSWER 40:
-function music_album(artist, title, track) {
-    var album = { artist: artist, title: title };
+function music_album(artist : string, title : string, track : number) {
+    let album = {artist, title};
     if (track) {
         album['tracks'] = track;
     }
@@ -698,52 +692,82 @@ function music_album(artist, title, track) {
 console.log(music_album("Artist 1", "The 1st Album", 5));
 console.log(music_album("Artist 2", "The 2nd Album", 6));
 console.log(music_album("Artist 3", "The 3rd Album", 7));
-//QUESTION 41: 
+
+//QUESTION 41: Magicians: Display magician names from an array.
+
 //ANSWER 41:
-var magicians = ["Taimor", "Mohsin", "Zahid"];
-function show_magicians(magicians) {
-    magicians.forEach(function (magicians) {
+let magicians : string[] = ["Taimor", "Mohsin", "Zahid"];
+
+function show_magicians(magicians : string[]) {
+    magicians.forEach(magicians => {
         console.log(magicians);
-    });
+    })
 }
 show_magicians(magicians);
-//QUESTION 42: 
+
+//QUESTION 42: Great Magicians: Add "the Great" to magician names.
+
 //ANSWER 42:
 //using the answer 41 magicians array
-function make_great(magicians) {
-    magicians.forEach(function (magicians) {
-        console.log("".concat(magicians, " the great"));
-    });
+function make_great(magicians : string[]) {
+    magicians.forEach(magicians => {
+        console.log(`${magicians} the great`);
+    })
 }
 make_great(magicians);
+
 //Another way
 console.log("\n Another way");
-function great_magi(magicians) {
-    for (var i = 0; i < magicians.length; i++) {
+function great_magi(magicians : string[]) {
+    for (let i = 0; i < magicians.length; i++) {
         magicians[i] = magicians[i] + " the great";
     }
 }
 great_magi(magicians); //modifies the original array
 show_magicians(magicians);
+
+
 /////////////////DAY 15 CHALLENGE//////////////////////
-//QUESTION 43: 
+
+//QUESTION 43: Unchanged Magicians: Preserve the original magician names while creating a new "great"
+//              list.
+
 //ANSWER 43:
 console.log("\n q43");
-var magicians1 = ["Taimor", "Mohsin", "Zahid"];
-function theGreat(magicians1) {
-    var great_magicians1 = [];
-    magicians1.forEach(function (magicians1) {
-        great_magicians1.push("".concat(magicians1, ", the great"));
+let magicians1 : string[] = ["Taimor", "Mohsin", "Zahid"];
+
+function theGreat(magicians1 : string[]) {
+    let great_magicians1: string[] = [];
+    magicians1.forEach(element => {
+        great_magicians1.push(`${element}, the great`);
     });
-    return great_magicians1;
+    return great_magicians1
 }
-var great_magicians1 = theGreat(magicians1.slice()); //creates a new mmodified array
+let great_magicians1 = theGreat(magicians1.slice()); //creates a new mmodified array
 console.log("Original magicians:");
 show_magicians(magicians); //shows original names
 console.log("Great Magicians:");
 show_magicians(great_magicians1); //shows modified names
-//QUESTION 44: 
+
+//QUESTION 44: Sandwiches: Summarize sandwich orders with varying ingredients.
+
 //ANSWER 44:
-// function m
-//QUESTION 45: 
+function make_sandwich(...items : string[]) {
+    console.log(`Making a sandwich with: ${items.join(',')}.`);
+}
+make_sandwich("ham", "cheese");
+make_sandwich("turkey", "lettuce", "tomato");
+make_sandwich("avocado", "sprouts", "mustard", "mayo");
+
+//QUESTION 45: Cars: Create detailed car objects with flexible properties
+
 //ANSWER 45:
+function make_car(manufacturer : string, model : string, ...options : [string, any][]): object {
+    let car = {manufacturer, model};
+    options.forEach(([key, value]) => car[key] = value);
+    return car;
+}
+console.log(make_car("Toyota", "Corolla", ["Color", "red"], ["year", 2020]));
+console.log(make_car("Ford","Fiesta", ["Color", "Blue"], ["sunroof", true]));
+
+*/
